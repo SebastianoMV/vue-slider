@@ -40,14 +40,15 @@ const app = new Vue({
            if(this.counterImg > this.slides.length -1){
                this.counterImg = 0;
            }
+           this.activateImage(active);
            console.log(this.counterImg);
        },
        prevImg(){
            this.counterImg--
            if(this.counterImg < 0){
             this.counterImg = this.slides.length -1;
-        }
-       },
+           }
+        },
         
     },
 
@@ -56,6 +57,7 @@ const app = new Vue({
             this.nextImg();
         }, 4000)
     },
+
 
 })
 
