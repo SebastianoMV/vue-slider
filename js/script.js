@@ -40,7 +40,7 @@ const app = new Vue({
            if(this.counterImg > this.slides.length -1){
                this.counterImg = 0;
            }
-           this.activateImage(active);
+           
            console.log(this.counterImg);
        },
        prevImg(){
@@ -49,6 +49,9 @@ const app = new Vue({
             this.counterImg = this.slides.length -1;
            }
         },
+        activateThumb(index){
+            this.counterImg = index;
+        }
         
     },
 
@@ -60,5 +63,3 @@ const app = new Vue({
 
 
 })
-
-    CanvasRenderingContext2D.lenght
