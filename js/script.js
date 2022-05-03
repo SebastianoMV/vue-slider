@@ -33,6 +33,8 @@ const app = new Vue({
         ],
         counterImg: 0,
         flag: true,
+        upHere: false,
+        
     },
     methods: {
        nextImg(){
@@ -51,14 +53,24 @@ const app = new Vue({
         },
         activateThumb(index){
             this.counterImg = index;
-        }
+        },
+        
+  
+        
         
     },
 
     mounted() {
-        setInterval( () =>{
+         
+       const timer = setInterval( () =>{
+          
+          
+          if(!this.upHere){
             this.nextImg();
-        }, 4000)
+
+          }
+      }, 3000)
+    
     },
 
 
