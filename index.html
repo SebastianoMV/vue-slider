@@ -29,7 +29,13 @@
                 <div class="thumbs">
                     <div @click="prevImg" class="prev"></div>
                     <div @click="nextImg" class="next"></div>
-                    <div :class="['thumb', (0 == counterImg) ? 'active' : '']" @click="activateThumb(0)">
+
+                    <div v-for="(slide, index) in  slides" :class="['thumb', (index == counterImg) ? 'active' : '']" @click="activateThumb(index)">
+                        <img :src="slides[index].image" alt="slides[index].title"/>
+                    </div>
+                    
+                    
+                    <!-- <div :class="['thumb', (0 == counterImg) ? 'active' : '']" @click="activateThumb(0)">
                         <img src="img/01.jpg" alt="Svezia"/>
                     </div>
                     <div :class="['thumb', (1 == counterImg) ? 'active' : '']" @click="activateThumb(1)">
@@ -43,7 +49,7 @@
                     </div>
                     <div :class="['thumb', (4 == counterImg) ? 'active' : '']" @click="activateThumb(4)">
                         <img src="img/05.jpg" alt="Paradise" />
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
