@@ -32,6 +32,7 @@ const app = new Vue({
         
         ],
         counterImg: 0,
+        flag: true,
     },
     methods: {
        nextImg(){
@@ -46,8 +47,14 @@ const app = new Vue({
            if(this.counterImg < 0){
             this.counterImg = this.slides.length -1;
         }
-       }
+       },
         
+    },
+
+    mounted() {
+        setInterval( () =>{
+            this.nextImg();
+        }, 4000)
     },
 
 })
