@@ -31,7 +31,7 @@
                     <div @click="nextImg" class="next"></div>
 
                     <div v-for="(slide, index) in  slides" :class="['thumb', (index == counterImg) ? 'active' : '']" @click="activateThumb(index)">
-                        <img :src="slides[index].image" alt="slides[index].title"/>
+                        <img :src="slide.image" :alt="slide.title"/>
                     </div>
                     
                     

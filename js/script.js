@@ -32,7 +32,6 @@ const app = new Vue({
         
         ],
         counterImg: 0,
-        flag: true,
         upHere: false,
         
     },
