@@ -42,7 +42,6 @@ const app = new Vue({
            if(this.counterImg > this.slides.length -1){
                this.counterImg = 0;
            }
-           
            console.log(this.counterImg);
        },
        prevImg(){
@@ -54,16 +53,12 @@ const app = new Vue({
         activateThumb(index){
             this.counterImg = index;
         },
-        
-  
-        
-        
+
     },
 
     mounted() {
          
-       const timer = setInterval( () =>{
-          
+       setInterval( () =>{       
           
           if(!this.upHere){
             this.nextImg();
